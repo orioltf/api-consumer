@@ -9,6 +9,10 @@
     "lint": "next lint --fix",
     "prettier": "prettier --write --ignore-path .gitignore ."
   },
+  "browserslist": [
+    "last 2 major versions and >0.3%",
+    "not dead, not op_mini all"
+  ],
   "dependencies": {
     "next": "13.0.0",
     "react": "18.2.0",
