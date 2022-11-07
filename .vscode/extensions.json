@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "nucllear.vscode-extension-auto-import",
+    "aaron-bond.better-comments",
+    "vivaxy.vscode-conventional-commits",
+    "clinyong.vscode-css-modules",
+    "pranaygp.vscode-css-peek",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "vector-of-bool.gitflow",
+    "vincaslt.highlight-matching-tag",
+    "ecmel.vscode-html-css",
+    "visualstudioexptteam.vscodeintellicode",
+    "zignd.html-css-class-completion",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "vunguyentuan.vscode-postcss",
+    "csstools.postcss",
+    "esbenp.prettier-vscode"
+  ]
+}
