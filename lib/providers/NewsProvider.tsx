@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import { News, NewsContext } from '../hooks/useNews'
-import { EnhancedError, fetcher, HttpMethod } from '../utils/fetch'
+import { EnhancedError, fetcher } from '../utils/fetch'
 import { ChildrenType } from '../utils/types'
 
 export const NewsProvider = ({ children }: ChildrenType) => {
@@ -12,7 +12,7 @@ export const NewsProvider = ({ children }: ChildrenType) => {
 
 	const getNews = async () => {
 		try {
-			await mutateNews(fetcher(NEWS_ENDPOINT, undefined, HttpMethod.GET), {
+			await mutateNews(fetcher(NEWS_ENDPOINT), {
 				optimisticData: data,
 				rollbackOnError: true,
 				populateCache: true,

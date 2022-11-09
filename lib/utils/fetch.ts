@@ -1,9 +1,5 @@
 import { TRANSACTION_ERROR_TYPES } from '../../site.config'
 
-export enum HttpMethod {
-	GET = 'GET',
-}
-
 export type ErrorsCatalog = { [key: string]: string | string[] | ErrorsCatalog }
 
 export type FetchError = {
@@ -61,17 +57,8 @@ export const handleErrorResponse = async (response: Response): Promise<EnhancedE
 	}
 }
 
-export const getOptions = <T>(data?: T, method?: HttpMethod): RequestInit => ({
-	method: method || HttpMethod.GET,
-	body: data ? JSON.stringify(data) : undefined,
-})
-
-export const fetcher = async <TPayload, TResponse>(
-	url: string,
-	data?: TPayload,
-	method?: HttpMethod
-): Promise<TResponse> => {
-	const response: Response = await fetch(url, getOptions(data, method))
+export const fetcher = async <TResponse>(url: string, config?: RequestInit): Promise<TResponse> => {
+	const response: Response = await fetch(url, config)
 
 	await handleErrorResponse(response)
 
