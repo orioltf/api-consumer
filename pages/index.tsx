@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { NewsList } from '../components/NewsList/NewsList'
 import { useNews } from '../lib/hooks/useNews'
 
 export default function Home() {
@@ -12,9 +13,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			{isLoading ? 'Loading…' : undefined}
-			{isError ? 'Something went wrong :(' : undefined}
-			{news ? JSON.stringify(news, null, 4) : undefined}
+			{isLoading ? 'Loading…' : null}
+			{isError ? 'Something went wrong :(' : null}
+			{news ? <NewsList news={news} /> : null}
 		</>
 	)
 }
