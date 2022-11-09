@@ -28,7 +28,7 @@ export const NewsProvider = ({ children }: ChildrenType) => {
 	return (
 		<NewsContext.Provider
 			value={{
-				news: data,
+				news: data?.response ? data.response : data,
 				isLoading: !error && !data,
 				isError: error || updateError,
 				getNews,
