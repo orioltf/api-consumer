@@ -1,0 +1,4 @@
+@custom-media --viewport-micro (min-width: 360px);
+@custom-media --viewport-small (min-width: 600px);
+@custom-media --viewport-medium (min-width: 720px);
+@custom-media --viewport-large (min-width: 1024px);
